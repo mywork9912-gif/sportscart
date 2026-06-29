@@ -1,0 +1,36 @@
+/* ============ Hero Slider ============ */
+.hero-slider{
+  position:relative;margin-top:64px;height:clamp(280px,42vw,460px);
+  overflow:hidden;background:linear-gradient(135deg,#0D47A1,#1565C0);
+}
+.slides{display:flex;height:100%;transition:transform .7s cubic-bezier(.4,0,.2,1)}
+.slide{
+  min-width:100%;height:100%;position:relative;
+  display:flex;align-items:center;justify-content:center;
+  padding:2rem;
+}
+.slide::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(13,71,161,.85),rgba(0,188,212,.4));
+}
+.slide-content{position:relative;z-index:2;color:#fff;text-align:center;max-width:680px;animation:fadeUp .6s ease}
+.slide-eyebrow{display:inline-block;background:rgba(255,255,255,.18);padding:.3rem .85rem;border-radius:999px;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:1rem;backdrop-filter:blur(8px)}
+.slide-content h2{font-size:clamp(1.6rem,3.5vw,2.6rem);margin-bottom:.75rem;color:#fff}
+.slide-content p{color:rgba(255,255,255,.92);margin-bottom:1.5rem;font-size:1.05rem}
+.slide-content .btn-primary{background:#fff;color:var(--primary)}
+.slide-content .btn-primary:hover{background:var(--accent);color:#fff}
+
+.slide-btn{
+  position:absolute;top:50%;transform:translateY(-50%);
+  width:46px;height:46px;border-radius:50%;
+  background:rgba(255,255,255,.25);color:#fff;font-size:1.6rem;
+  display:grid;place-items:center;backdrop-filter:blur(10px);
+  transition:background var(--transition);z-index:3;
+}
+.slide-btn:hover{background:rgba(255,255,255,.4)}
+.slide-btn.prev{left:1rem}
+.slide-btn.next{right:1rem}
+
+.slide-dots{position:absolute;bottom:1rem;left:50%;transform:translateX(-50%);display:flex;gap:.4rem;z-index:3}
+.slide-dots button{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.5);transition:all var(--transition)}
+.slide-dots button.active{background:#fff;width:24px;border-radius:4px}

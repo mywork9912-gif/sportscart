@@ -1,0 +1,26 @@
+/* ============ Dark Mode ============ */
+body.dark{
+  --bg:#0d1421;
+  --surface:#172033;
+  --text:#e6ecf3;
+  --text-muted:#94a3b8;
+  --border:#243049;
+  --shadow-sm:0 2px 8px rgba(0,0,0,.3);
+  --shadow-md:0 8px 24px rgba(0,0,0,.4);
+  --shadow-lg:0 20px 50px rgba(0,0,0,.5);
+}
+body.dark .navbar{background:rgba(13,20,33,.85);border-color:var(--border)}
+body.dark .pc-img{background:linear-gradient(135deg,#1c263b,#172033)}
+body.dark .pc-store{background:rgba(23,32,51,.95);color:var(--secondary)}
+body.dark .icon-btn{background:#1c263b}
+body.dark .icon-btn:hover{background:#243049}
+body.dark .section-alt{background:linear-gradient(180deg,transparent,rgba(0,188,212,.04))}
+body.dark .filter-bar select,
+body.dark .contact-form input,
+body.dark .contact-form textarea,
+body.dark .page-search,
+body.dark .search-wrap input{background:var(--bg);color:var(--text);border-color:var(--border)}
+body.dark .nav-toggle span{background:var(--text)}
+body.dark .compare-table th{background:#0d1421}
+body.dark .compare-remove{background:#2a1518;color:#ff8a80}
+body.dark .footer{background:#070c17}

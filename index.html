@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="SportsCart - Compare sports products from trusted partner stores and grab the best deals." />
+<title>SportsCart - Compare Sports Products & Best Deals</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/navbar.css" />
+<link rel="stylesheet" href="css/footer.css" />
+<link rel="stylesheet" href="css/cards.css" />
+<link rel="stylesheet" href="css/slider.css" />
+<link rel="stylesheet" href="css/category.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+<link rel="stylesheet" href="css/darkmode.css" />
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<header class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">⚡</span>
+      <span class="logo-text">Sports<span>Cart</span></span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-menu" id="navMenu">
+      <a href="index.html" class="active">Home</a>
+      <a href="pages/category.html">Categories</a>
+      <a href="pages/deals.html">Deals</a>
+      <a href="pages/stores.html">Stores</a>
+      <a href="pages/compare.html">Compare</a>
+      <a href="about.html">About</a>
+    </nav>
+
+    <div class="nav-actions">
+      <div class="search-wrap">
+        <input type="text" id="navSearch" placeholder="Search products, brands…" aria-label="Search" />
+        <div class="search-results" id="searchResults"></div>
+      </div>
+      <a href="pages/favorites.html" class="icon-btn" aria-label="Favorites">♥<span class="badge" id="favBadge">0</span></a>
+      <a href="pages/compare.html" class="icon-btn" aria-label="Compare">⇄<span class="badge" id="compareBadge">0</span></a>
+      <button class="icon-btn" id="darkToggle" aria-label="Toggle dark mode">🌙</button>
+    </div>
+  </div>
+</header>
+
+<!-- ========== HERO SLIDER ========== -->
+<section class="hero-slider" id="heroSlider">
+  <div class="slides" id="slides"></div>
+  <button class="slide-btn prev" id="prevSlide" aria-label="Previous">‹</button>
+  <button class="slide-btn next" id="nextSlide" aria-label="Next">›</button>
+  <div class="slide-dots" id="slideDots"></div>
+</section>
+
+<!-- ========== CATEGORIES ========== -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>Shop by Category</h2>
+      <a href="pages/category.html" class="link-more">View all →</a>
+    </div>
+    <div class="category-grid" id="categoryGrid"></div>
+  </div>
+</section>
+
+<!-- ========== TRENDING ========== -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <h2>🔥 Trending Now</h2>
+      <a href="pages/category.html" class="link-more">See more →</a>
+    </div>
+    <div class="product-grid" id="trendingGrid"></div>
+  </div>
+</section>
+
+<!-- ========== DEALS ========== -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>⚡ Today's Deals</h2>
+      <a href="pages/deals.html" class="link-more">All deals →</a>
+    </div>
+    <div class="product-grid" id="dealsGrid"></div>
+  </div>
+</section>
+
+<!-- ========== TOP RATED ========== -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <h2>⭐ Top Rated</h2>
+    </div>
+    <div class="product-grid" id="topRatedGrid"></div>
+  </div>
+</section>
+
+<!-- ========== BRANDS ========== -->
+<section class="section">
+  <div class="container">
+    <div class="section-head"><h2>Popular Brands</h2></div>
+    <div class="brand-strip" id="brandStrip"></div>
+  </div>
+</section>
+
+<!-- ========== STORES ========== -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head"><h2>Partner Stores</h2></div>
+    <div class="store-strip" id="storeStrip"></div>
+  </div>
+</section>
+
+<!-- ========== NEWSLETTER ========== -->
+<section class="newsletter">
+  <div class="container newsletter-inner">
+    <div>
+      <h2>Never miss a deal</h2>
+      <p>Get the best sports offers, straight to your inbox.</p>
+    </div>
+    <form id="newsletterForm" class="newsletter-form">
+      <input type="email" id="newsletterEmail" placeholder="your@email.com" required />
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+  <p class="form-msg" id="newsletterMsg"></p>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer" id="footer"></footer>
+
+<button id="scrollTop" class="scroll-top" aria-label="Scroll to top">↑</button>
+
+<!-- Data -->
+<script src="data/categories.js"></script>
+<script src="data/brands.js"></script>
+<script src="data/stores.js"></script>
+<script src="data/offers.js"></script>
+<script src="data/products.js"></script>
+
+<!-- Logic -->
+<script src="js/utils.js"></script>
+<script src="js/darkmode.js"></script>
+<script src="js/favorites.js"></script>
+<script src="js/compare.js"></script>
+<script src="js/search.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
